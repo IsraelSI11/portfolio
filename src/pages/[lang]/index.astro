@@ -1,0 +1,14 @@
+---
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContentLayout from "../../layouts/ContentLayout.astro";
+import * as m from "../../paraglide/messages";
+---
+
+<BaseLayout title={m.langBasedHomePageTitle()}>
+  <Header />
+  <ContentLayout>
+    <Hero />
+  </ContentLayout>
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+import LanguagePicker from "../components/LanguagePicker.astro";
+import "@fontsource-variable/outfit";
+import ContentLayout from "./ContentLayout.astro";
+
+const title = Astro.props.title;
+const paraglide = Astro.locals.paraglide;
+---
+
+<html lang={paraglide.lang} dir={paraglide.dir}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-background-color text-white">
+      <slot />
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: "Outfit Variable", sans-serif;
+  }
+</style>

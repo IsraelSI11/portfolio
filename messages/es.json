@@ -1,0 +1,22 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "homePageTitle": "Página principal",
+  "goToLanguage": "Ir a español",
+  "experienceNavTitle" : "Experiencia",
+  "experienceNavLabel" : "experiencia",
+  "experienceNavUrl" : "/#experiencia",
+  "projectsNavTitle" : "Proyectos",
+  "projectsNavLabel" : "proyectos",
+  "projectsNavUrl" : "/#proyectos",
+  "educationNavTitle" : "Educación",
+  "educationNavLabel" : "educación",
+  "educationNavUrl" : "/#educacion",
+  "certificationsNavTitle" : "Certificaciones",
+  "certificationsNavLabel" : "certificaciones",
+  "certificationsNavUrl" : "/#certificaciones",
+  "aboutMeNavTitle" : "Sobre mí",
+  "aboutMeNavLabel" : "sobre-mi",
+  "aboutMeNavUrl" : "/#sobre-mi",
+  "softwareEngineerTitle" : "Ingeniero de software",
+  "softwareEngineerDescription" : "Hola, mi nombre es Israel y soy Ingeniero de Software. Actualmente me enfoco en el desarrollo web, en tecnologías backend como Node.js y Spring, y en tecnologías frontend como React con Tailwind CSS."
+}

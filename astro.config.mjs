@@ -1,16 +1,18 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
-
-import tailwind from '@astrojs/tailwind';
+import paraglide from '@inlang/paraglide-astro';
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
+  // Use astro's i18n routing for deciding which language to use
   i18n: {
-    defaultLocale: "en",
-    locales: ["es", "en"],
-    routing: {
-      prefixDefaultLocale: false
-    }
-  }
+    locales: ['en', 'es'],
+    defaultLocale: 'en'
+  },
+  output: 'server',
+  integrations: [paraglide({
+    // recommended settings
+    project: './project.inlang',
+    outdir: './src/paraglide' //where your files should be
+  }), tailwind()]
 });

@@ -1,0 +1,51 @@
+---
+import * as m from "../paraglide/messages";
+
+const navItems = [
+    {
+        title: m.aboutMeNavTitle(),
+        label: m.aboutMeNavLabel(),
+        url: m.aboutMeNavUrl(),
+    },
+    {
+        title: m.experienceNavTitle(),
+        label: m.aboutMeNavLabel(),
+        url: m.experienceNavUrl(),
+    },
+    {
+        title: m.projectsNavTitle(),
+        label: m.projectsNavLabel(),
+        url: m.projectsNavUrl(),
+    },
+    {
+        title: m.educationNavTitle(),
+        label: m.educationNavLabel(),
+        url: m.educationNavUrl(),
+    },
+    {
+        title: m.certificationsNavTitle(),
+        label: m.certificationsNavLabel(),
+        url: m.certificationsNavUrl(),
+    },
+];
+---
+
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-4"
+>
+  <nav
+    class="flex px-3 w-full text-sm font-semibold rounded-full justify-center lg:gap-8 items-center"
+  >
+    {
+      navItems.map((link) => (
+        <a
+          class="relative block px-2 py-2 transition hover:text-orange-highlight"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
+  </nav>
+</header>
