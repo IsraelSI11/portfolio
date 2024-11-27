@@ -1,0 +1,45 @@
+---
+import * as m from "../paraglide/messages";
+import LearnMore from "./LearnMore.astro";
+
+const certifications = [
+    {
+        title: "Github foundations",
+        description: m.certification1Description(),
+        image: "/foundations.png",
+        url: "https://www.credly.com/badges/59b99d11-7818-4e7a-93e0-570231c57b42",
+    },
+    {
+        title: "MongoDB Associate Developer",
+        description: m.certification2Description(),
+        image: "/mongodb.png",
+        url: "https://www.credly.com/badges/f47ea261-da24-455e-ba01-928030dee904",
+    },
+];
+---
+
+<section class="flex flex-col">
+    <h2 class="font-semibold text-5xl">{m.certificationsTitle()}</h2>
+    <div class="flex flex-col gap-6 mt-6">
+        {
+            certifications.map((certification) => (
+                <div class="flex gap-6">
+                    <div class="flex justify-center">
+                        <img
+                            src={certification.image}
+                            alt={certification.title}
+                            class="rounded-lg"
+                        />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex align-middle items-center justify-start gap-2">
+                            <h3 class="text-3xl font-semibold">{certification.title}</h3>
+                            <LearnMore href={certification.url}>{m.viewCertification()}</LearnMore>
+                        </div>
+                        <p>{certification.description}</p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>

@@ -31,5 +31,13 @@
   "project2Title": "Keep Track of It",
   "project2Description": "Aplicación web que permite a los usuarios llevar un registro de sus gastos. La aplicación permite a los usuarios añadir, editar y eliminar gastos, así como visualizar un resumen de los gastos realizados en un periodo de tiempo determinado.",
   "project3Title": "Stock Hub",
-  "project3Description": "Aplicación web que permite a los usuarios buscar información sobre acciones de la bolsa de valores. La aplicación permite a los usuarios buscar información sobre una acción en particular, así como visualizar información general sobre el mercado de valores."
+  "project3Description": "Aplicación web que permite a los usuarios buscar información sobre acciones de la bolsa de valores. La aplicación permite a los usuarios buscar información sobre una acción en particular, así como visualizar información general sobre el mercado de valores.",
+  "educationTitle": "Educación",
+  "certificationsTitle": "Certificaciones",
+  "viewCertification": "Ver certificación",
+  "othersText": "Otros",
+  "certification1Description": "Certificación diseñada para validar conocimientos básicos sobre el uso de Git y GitHub, herramientas esenciales en el desarrollo de software colaborativo.",
+  "certification2Description": "Certificación que valida los conocimientos y habilidades fundamentales para desarrollar aplicaciones utilizando MongoDB.",
+  "skills": "Habilidades"
+  
 }
