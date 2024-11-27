@@ -1,23 +1,18 @@
 ---
 import * as m from "../paraglide/messages";
-import DownloadIcon from "./icons/DownloadIcon.astro";
-import GithubIcon from "./icons/GithubIcon.astro";
-import LinkedinIcon from "./icons/LinkedinIcon.astro";
-import MailIcon from "./icons/MailIcon.astro";
-import SocialLink from "./SocialLink.astro";
 import SocialLinksGroup from "./SocialLinksGroup.astro";
 ---
 
 <section class="mt-36">
-    <div class="flex flex-row justify-center align-middle gap-28">
+    <div class="flex flex-row align-middle gap-28">
         <div class="flex flex-col justify-center gap-6 w-1/2">
             <h1 class="text-7xl font-bold text-orange-highlight">
                 Israel Solís
             </h1>
-            <h2 class="text-3xl font-semibold text-gray-desc">
+            <h2 class="text-3xl text-gray-desc">
                 {m.softwareEngineerTitle()}
             </h2>
-            <p class="text-lg text-gray-desc">
+            <p class="text-lg">
                 {m.softwareEngineerDescription()}
             </p>
             <SocialLinksGroup />

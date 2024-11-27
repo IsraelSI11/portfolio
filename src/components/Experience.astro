@@ -1,0 +1,14 @@
+---
+import * as m from "../paraglide/messages";
+---
+
+<section class="flex flex-col w-3/4">
+    <h2 class="font-semibold text-5xl">{m.workExperience()}</h2>
+    <div class="flex flex-row text-xl gap-6 text-gray-desc mt-2">
+        <h3>
+            {m.workExperienceIntern()}
+        </h3>
+        <span class="text-xl">{m.workExperienceInternDuration()}</span>
+    </div>
+    <p class="mt-4">{m.workExperienceInternDescription()}</p>
+</section>

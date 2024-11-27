@@ -1,0 +1,83 @@
+---
+import * as m from "../paraglide/messages";
+import GithubIcon from "./icons/GithubIcon.astro";
+import SocialLink from "./SocialLink.astro";
+import { TAGS } from "../utils/tags";
+import RepositoryLink from "./RepositoryLink.astro";
+
+const projects = [
+    {
+        title: m.project1Title(),
+        description: m.project1Description(),
+        image: "/project1.png",
+        repositoryLink: null,
+        tags: [
+            TAGS.REACT,
+            TAGS.TYPESCRIPT,
+            TAGS.NODEJS,
+            TAGS.TAILWIND,
+            TAGS.MARIADB,
+            TAGS.JEST,
+            TAGS.DOCKER,
+        ],
+    },
+    {
+        title: m.project2Title(),
+        description: m.project2Description(),
+        image: "/project2.png",
+        repositoryLink: "https://github.com/IsraelSI11/Keep-track-of-it",
+        tags: [TAGS.REACT, TAGS.SHADCN, TAGS.FIREBASE, TAGS.TAILWIND],
+    },
+    {
+        title: m.project3Title(),
+        description: m.project3Description(),
+        image: "/project3.png",
+        repositoryLink: "https://github.com/IsraelSI11/stock-hub",
+        tags: [TAGS.ANGULAR, TAGS.JAVA, TAGS.SPRING, TAGS.POSTGRESQL],
+    },
+];
+---
+
+<section class="flex flex-col">
+    <h2 class="font-semibold text-5xl">{m.projectsTitle()}</h2>
+    <div class="flex flex-col gap-6 mt-6">
+        {
+            projects.map((project) => (
+                <div class="flex flex-col gap-6">
+                    <div class="flex w-full justify-center">
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            class="rounded-lg"
+                        />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex align-middle items-center justify-between">
+                            <h3 class="text-3xl font-semibold text-orange-highlight">
+                                {project.title}
+                            </h3>
+                            {project.repositoryLink ? (
+                                <RepositoryLink href={project.repositoryLink} />
+                            ) : (
+                                <span>{m.privateRepository()}</span>
+                            )}
+                        </div>
+                        <ul class="flex flex-row mb-2 gap-x-2">
+                            {project.tags.map((tag) => (
+                                <li>
+                                    <span
+                                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                                    >
+                                        <tag.icon class="size-4" />
+                                        {tag.name}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                        <p class="w-2/3">{project.description}</p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>

@@ -18,5 +18,18 @@
   "aboutMeNavLabel" : "sobre-mi",
   "aboutMeNavUrl" : "/#sobre-mi",
   "softwareEngineerTitle" : "Ingeniero de software",
-  "softwareEngineerDescription" : "Hola, mi nombre es Israel y soy Ingeniero de Software. Actualmente me enfoco en el desarrollo web, en tecnologías backend como Node.js y Spring, y en tecnologías frontend como React con Tailwind CSS."
+  "softwareEngineerDescription" : "Hola, mi nombre es Israel y soy Ingeniero de Software. Actualmente me enfoco en el desarrollo web, en tecnologías backend como Node.js y Spring, y en tecnologías frontend como React con Tailwind CSS.",
+  "workExperience": "Experiencia laboral",
+  "workExperienceIntern": "Prácticas backend Java - NTT DATA",
+  "workExperienceInternDuration": "Duración: 3 meses",
+  "workExperienceInternDescription": "Participación en un equipo de desarrollo encargado de desarrollar y mantener funcionalidades de un sistema de gestión presupuestaria para el sector público. Mis principales responsabilidades fueron la resolución de incidencias, la realización de pruebas para garantizar el correcto funcionamiento y el desarrollo de nuevas funcionalidades.",
+  "repository": "Repositorio",
+  "privateRepository": "Repositorio privado",
+  "projectsTitle": "Proyectos",
+  "project1Title": "Activity Tracker",
+  "project1Description": "Aplicación web que permite a los usuarios llevar un registro de sus actividades diarias. La aplicación permite a los usuarios crear, editar y eliminar actividades, así como visualizar un resumen de las actividades realizadas en un periodo de tiempo determinado.",
+  "project2Title": "Keep Track of It",
+  "project2Description": "Aplicación web que permite a los usuarios llevar un registro de sus gastos. La aplicación permite a los usuarios añadir, editar y eliminar gastos, así como visualizar un resumen de los gastos realizados en un periodo de tiempo determinado.",
+  "project3Title": "Stock Hub",
+  "project3Description": "Aplicación web que permite a los usuarios buscar información sobre acciones de la bolsa de valores. La aplicación permite a los usuarios buscar información sobre una acción en particular, así como visualizar información general sobre el mercado de valores."
 }
