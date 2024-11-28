@@ -13,13 +13,13 @@ const education = [
 ];
 ---
 
-<ol class="relative border-s-8 border-background-blue">
+<ol class="relative left-2 border-s-4 border-slate-900">
     {education.map((item) => (
         <li class="mb-10 ms-4">
             <div
-                class="absolute size-5 rounded-full mt-1.5 -start-3.5 border border-gray-700 bg-orange-highlight"
+                class="absolute size-5 rounded-full mt-1.5 -start-3 border border-gray-700 bg-orange-highlight"
             ></div>
-            <h3 class="text-xl md:text-3xl font-semibold text-orange-highlight">
+            <h3 class="text-xl md:text-2xl font-semibold">
                 {item.degree}
             </h3>
             <h4>{item.institution}</h4>
