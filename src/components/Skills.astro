@@ -125,7 +125,7 @@ const skills = {
     <div class="flex flex-row flex-wrap md:flex-nowrap gap-12 mt-6">
         {
             Object.keys(skills).map((skillType) => (
-                <div class="flex flex-col w-full md:w-1/3 mx-4 md:mx-0 p-4 [background:linear-gradient(45deg,#172033,theme(colors.slate.900)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_#FFC300_86%,_#FFC300_90%,_#FFC300_94%,_theme(colors.slate.600/.48))_border-box] rounded-2xl border border-transparent animate-border">
+                <div class="flex flex-col w-full md:w-1/3 mx-4 md:mx-0 p-4 [background:linear-gradient(45deg,theme(colors.zinc.800),theme(colors.zinc.900)_50%,theme(colors.zinc.800))_padding-box,conic-gradient(from_var(--border-angle),theme(colors.zinc.800/.48)_80%,#FFC300_86%,#FFC300_90%,#FFC300_94%,theme(colors.zinc.800/.48))_border-box] rounded-2xl border border-transparent animate-border">
                     <h3 class="text-xl md:text-2xl font-semibold border-b border-b-gray-700 pb-2">{skillType}</h3>
                     <ul class="list-none mt-2">
                         {skills[skillType].map((skill) => (
