@@ -1,12 +1,13 @@
 ---
 import DownloadIcon from "./icons/DownloadIcon.astro";
+import EyeIcon from "./icons/EyeIcon.astro";
 import GithubIcon from "./icons/GithubIcon.astro";
 import LinkedinIcon from "./icons/LinkedinIcon.astro";
 import MailIcon from "./icons/MailIcon.astro";
 import SocialLink from "./SocialLink.astro";
 ---
 
-<div class="flex flex-row gap-2">
+<div class="flex flex-row flex-wrap gap-2">
     <SocialLink href="https://github.com/IsraelSi11">
         <GithubIcon />
         <span>GitHub</span>
@@ -14,7 +15,7 @@ import SocialLink from "./SocialLink.astro";
     <SocialLink
         href="https://www.linkedin.com/in/israel-solís-iglesias-43ab6225a/"
     >
-        <LinkedinIcon color="#0072B1" />
+        <LinkedinIcon />
         <span>Linkedin</span>
     </SocialLink>
     <SocialLink href="mailto:israelsi02@hotmail.com">
@@ -27,5 +28,11 @@ import SocialLink from "./SocialLink.astro";
     >
         <DownloadIcon />
         <span>Descargar CV</span>
+    </SocialLink>
+    <SocialLink
+        href="/Israel_Solís_Iglesias_CV.pdf"
+    >
+        <EyeIcon />
+        <span>Visualizar CV</span>
     </SocialLink>
 </div>

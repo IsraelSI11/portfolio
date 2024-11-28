@@ -18,25 +18,30 @@ const certifications = [
 ];
 ---
 
-<section class="flex flex-col">
-    <h2 class="font-semibold text-5xl">{m.certificationsTitle()}</h2>
-    <div class="flex flex-col gap-6 mt-6">
+<section class="container scroll-m-10 w-full mx-auto lg:max-w-4xl md:max-w-2xl">
+    <h2 class="font-semibold text-3xl md:text-5xl">{m.certificationsTitle()}</h2>
+    <div class="flex flex-col justify-start gap-6 mt-6">
         {
             certifications.map((certification) => (
-                <div class="flex gap-6">
-                    <div class="flex justify-center">
+                <div class="flex flex-col md:flex-row md:justify-start gap-6 w-full">
+                    <div class="flex justify-center md:justify-start container w-full md:max-w-44">
                         <img
                             src={certification.image}
                             alt={certification.title}
-                            class="rounded-lg"
                         />
                     </div>
                     <div class="flex flex-col gap-2">
-                        <div class="flex align-middle items-center justify-start gap-2">
-                            <h3 class="text-3xl font-semibold">{certification.title}</h3>
-                            <LearnMore href={certification.url}>{m.viewCertification()}</LearnMore>
+                        <div class="flex align-middle items-center justify-center md:justify-start gap-2">
+                            <h3 class="text-orange-highlight text-xl md:text-3xl font-semibold">
+                                {certification.title}
+                            </h3>
                         </div>
-                        <p>{certification.description}</p>
+                        <p class="text-center md:text-left">{certification.description}</p>
+                        <div class="flex w-full justify-center md:justify-start">
+                            <LearnMore href={certification.url}>
+                                {m.viewCertification()}
+                            </LearnMore>
+                        </div>
                     </div>
                 </div>
             ))

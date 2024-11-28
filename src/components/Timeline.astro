@@ -1,30 +1,31 @@
+---
+const education = [
+    {
+        degree: "Ingeniería Informática del Software",
+        institution: "Universidad de Oviedo",
+        period: "Septiembre 2020 - Julio 2024",
+    },
+    {
+        degree: "Bachillerato tecnológico",
+        institution: "IES La Quintana",
+        period: "Septiembre 2018 - Junio 2020",
+    },
+];
+---
+
 <ol class="relative border-s-8 border-background-blue">
-    <li class="mb-10 ms-4">
-        <div
-            class="absolute size-5 rounded-full mt-1.5 -start-3.5 border border-gray-700 bg-orange-highlight"
-        >
-        </div>
-        <h3 class="text-3xl font-semibold text-orange-highlight">
-            Ingeniería Informática del Software
-        </h3>
-        <h4>Universidad de Oviedo</h4>
-        <time
-            class="mb-1 text-sm font-normal leading-none text-gray-400"
-            >Septiembre 2020 - Julio 2024</time
-        >
-    </li>
-    <li class="mb-10 ms-4">
-        <div
-            class="absolute size-5 rounded-full mt-1.5 -start-3.5 border border-gray-700 bg-orange-highlight"
-        >
-        </div>
-        <h3 class="text-3xl font-semibold text-orange-highlight">
-            Bachillerato tecnológico
-        </h3>
-        <h4>IES La Quintana</h4>
-        <time
-            class="mb-1 text-sm font-normal leading-none text-gray-400 "
-            >Septiembre 2018 - Junio 2020</time
-        >
-    </li>
+    {education.map((item) => (
+        <li class="mb-10 ms-4">
+            <div
+                class="absolute size-5 rounded-full mt-1.5 -start-3.5 border border-gray-700 bg-orange-highlight"
+            ></div>
+            <h3 class="text-xl md:text-3xl font-semibold text-orange-highlight">
+                {item.degree}
+            </h3>
+            <h4>{item.institution}</h4>
+            <time class="mb-1 text-sm font-normal leading-none text-gray-400">
+                {item.period}
+            </time>
+        </li>
+    ))}
 </ol>
