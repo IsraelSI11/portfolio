@@ -38,9 +38,9 @@ const navItems = [
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-4"
+  class="fixed top-0 z-10 flex items-center justify-end md:justify-center w-full mx-auto mt-4"
 >
-  <button id="open-navbar" aria-controls="mobile-navbar" class="block md:hidden"
+  <button id="open-navbar" aria-controls="mobile-navbar" class="flex items-center px-2 py-2 mr-5 bg-zinc-800 border border-gray-700 rounded-lg md:hidden"
     ><MenuIcon /></button
   >
   <nav
@@ -90,6 +90,7 @@ const navItems = [
   function toggleMobileNavbar() {
     const mobileNavbar = document.getElementById("mobile-navbar");
     const body = document.querySelector("body");
+    const header = document.querySelector("header");
 
     if (mobileNavbar!.classList.contains("opacity-0")) {
       // Aparecer con fade-in

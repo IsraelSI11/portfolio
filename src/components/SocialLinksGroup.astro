@@ -5,9 +5,11 @@ import GithubIcon from "./icons/GithubIcon.astro";
 import LinkedinIcon from "./icons/LinkedinIcon.astro";
 import Mail from "./Mail.astro";
 import SocialLink from "./SocialLink.astro";
+
+import * as m from "../paraglide/messages";
 ---
 
-<div class="flex flex-row flex-wrap gap-2">
+<div class="flex flex-row flex-wrap justify-center md:justify-normal gap-2">
     <SocialLink href="https://github.com/IsraelSi11">
         <GithubIcon />
         <span>GitHub</span>
@@ -23,13 +25,13 @@ import SocialLink from "./SocialLink.astro";
         download="Israel_Solís_Iglesias_CV"
     >
         <DownloadIcon />
-        <span>Descargar CV</span>
+        <span>{m.downloadCv()}</span>
     </SocialLink>
     <SocialLink
         href="/Israel_Solís_Iglesias_CV.pdf"
     >
         <EyeIcon />
-        <span>Visualizar CV</span>
+        <span>{m.viewCv()}</span>
     </SocialLink>
     <div class="col-span-2">
         <Mail/>
