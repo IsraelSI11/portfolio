@@ -9,7 +9,6 @@ export default defineConfig({
     locales: ['en', 'es'],
     defaultLocale: 'en'
   },
-  output: 'server',
   integrations: [paraglide({
     // recommended settings
     project: './project.inlang',
