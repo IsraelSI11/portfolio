@@ -1,38 +1,45 @@
 ---
 import * as m from "../paraglide/messages";
+import { languageTag } from "../paraglide/runtime";
 import CloseIcon from "./icons/CloseIcon.astro";
 import MenuIcon from "./icons/MenuIcon.astro";
+import LanguagePicker from "./LanguagePicker.astro";
+
+const parseUrl = (url: string) => {
+  if (languageTag() === "en") return url;
+  return `/${languageTag()}${url}`;
+};
 
 const navItems = [
   {
     title: m.aboutMeNavTitle(),
     label: m.aboutMeNavLabel(),
-    url: m.aboutMeNavUrl(),
+    url: parseUrl(m.aboutMeNavUrl()),
   },
   {
     title: m.experienceNavTitle(),
     label: m.aboutMeNavLabel(),
-    url: m.experienceNavUrl(),
+    url: parseUrl(m.experienceNavUrl()),
   },
   {
     title: m.projectsNavTitle(),
     label: m.projectsNavLabel(),
-    url: m.projectsNavUrl(),
+    url: parseUrl(m.projectsNavUrl()),
   },
   {
     title: m.educationNavTitle(),
     label: m.educationNavLabel(),
-    url: m.educationNavUrl(),
+    url: parseUrl(m.educationNavUrl()),
   },
   {
     title: m.certificationsNavTitle(),
     label: m.certificationsNavLabel(),
-    url: m.certificationsNavUrl(),
+    url: parseUrl(m.certificationsNavUrl()),
   },
   {
     title: m.skillsNavTitle(),
     label: m.skillsNavLabel(),
-    url: m.skillsNavUrl(),
+    url: parseUrl(m.skillsNavUrl()),
   },
 ];
 ---
@@ -40,7 +47,11 @@ const navItems = [
 <header
   class="fixed top-0 z-10 flex items-center justify-end md:justify-center w-full mx-auto mt-4"
 >
-  <button id="open-navbar" aria-controls="mobile-navbar" class="flex items-center px-2 py-2 mr-5 bg-zinc-800 border border-gray-700 rounded-lg md:hidden"
+  <button
+    id="open-navbar"
+    aria-controls="mobile-navbar"
+    aria-label={m.open()}
+    class="flex items-center px-2 py-2 mr-5 bg-zinc-800 border border-gray-700 rounded-lg md:hidden"
     ><MenuIcon /></button
   >
   <nav
@@ -58,15 +69,19 @@ const navItems = [
         </a>
       ))
     }
+    <LanguagePicker />
   </nav>
   <nav
     id="mobile-navbar"
-    class="fixed h-screen w-screen top-0 bottom-0 bg-zinc-800 p-6 opacity-0 invisible"
+    class="fixed h-screen w-screen top-0 bottom-0 bg-zinc-800 font-semibold p-6 opacity-0 invisible"
   >
-    <div class="flex justify-between mb-6">
+    <div class="flex justify-between items-center mb-6">
       <h2 class="font-semibold text-2xl md:text-3xl">{m.menu()}</h2>
-      <button id="close-navbar" aria-controls="mobile-navbar"
-        ><CloseIcon /></button
+      <LanguagePicker />
+      <button
+        id="close-navbar"
+        aria-controls="mobile-navbar"
+        aria-label={m.close()}><CloseIcon /></button
       >
     </div>
     {
@@ -74,7 +89,7 @@ const navItems = [
         <div class="flex flex-col items-center mt-4">
           <hr class="w-full border-t-gray-400 mb-3" />
           <a
-            class="block w-full px-4 py-2 text-center text-lg text-white transition hover:bg-zinc-700 rounded"
+            class="block w-full px-4 py-2 text-center text-lg"
             aria-label={link.label}
             href={link.url}
           >

@@ -2,7 +2,7 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "langBasedHomePageTitle": "Portfolio of Israel Solís",
   "homePageTitle": "Home Page",
-  "goToLanguage": "Go to Spanish",
+  "goToLanguage": "EN",
   "experienceNavTitle": "Experience",
   "experienceNavLabel": "experience",
   "experienceNavUrl": "/#experience",
@@ -51,5 +51,9 @@
   "period1": "September 2020 - July 2024",
   "degree2": "High School",
   "institution2": "IES La Quintana",
-  "period2": "September 2018 - June 2020"
+  "period2": "September 2018 - June 2020",
+  "switchToEnglish": "Switch to English",
+  "switchToSpanish": "Switch to Spanish",
+  "close": "Close",
+  "open": "Open"
 }

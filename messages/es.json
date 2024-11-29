@@ -2,7 +2,7 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "langBasedHomePageTitle": "Portfolio de Israel Solís Iglesias",
   "homePageTitle": "Página principal",
-  "goToLanguage": "Ir a español",
+  "goToLanguage": "ES",
   "experienceNavTitle" : "Experiencia",
   "experienceNavLabel" : "experiencia",
   "experienceNavUrl" : "/#experiencia",
@@ -45,5 +45,15 @@
   "skills": "Habilidades",
   "menu": "Menú",
   "viewCv": "Ver CV",
-  "downloadCv": "Descargar CV"
+  "downloadCv": "Descargar CV",
+  "degree1": "Ingeniería Informática del Software",
+  "institution1": "Universidad de Oviedo",
+  "period1": "Septiembre 2020 - Julio 2024",
+  "degree2": "Bachillerato tecnológico",
+  "institution2": "IES La Quintana",
+  "period2": "Septiembre 2018 - Junio 2020",
+  "switchToEnglish": "Cambiar a inglés",
+  "switchToSpanish": "Cambiar a español",
+  "close": "Cerrar",
+  "open": "Abrir"
 }
