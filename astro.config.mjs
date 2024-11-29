@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import paraglide from '@inlang/paraglide-astro';
 import tailwind from "@astrojs/tailwind";
+import vercel from '@astrojs/vercel/static';
 // https://astro.build/config
 export default defineConfig({
   // Use astro's i18n routing for deciding which language to use
@@ -14,5 +15,5 @@ export default defineConfig({
     project: './project.inlang',
     outdir: './src/paraglide' //where your files should be
   }), tailwind()],
-  site: "https://israelsi.tech",
+  adapter:vercel()
 });
