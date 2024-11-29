@@ -1,40 +1,51 @@
 ---
 import * as m from "../paraglide/messages";
+import CloseIcon from "./icons/CloseIcon.astro";
+import MenuIcon from "./icons/MenuIcon.astro";
 
 const navItems = [
-    {
-        title: m.aboutMeNavTitle(),
-        label: m.aboutMeNavLabel(),
-        url: m.aboutMeNavUrl(),
-    },
-    {
-        title: m.experienceNavTitle(),
-        label: m.aboutMeNavLabel(),
-        url: m.experienceNavUrl(),
-    },
-    {
-        title: m.projectsNavTitle(),
-        label: m.projectsNavLabel(),
-        url: m.projectsNavUrl(),
-    },
-    {
-        title: m.educationNavTitle(),
-        label: m.educationNavLabel(),
-        url: m.educationNavUrl(),
-    },
-    {
-        title: m.certificationsNavTitle(),
-        label: m.certificationsNavLabel(),
-        url: m.certificationsNavUrl(),
-    },
+  {
+    title: m.aboutMeNavTitle(),
+    label: m.aboutMeNavLabel(),
+    url: m.aboutMeNavUrl(),
+  },
+  {
+    title: m.experienceNavTitle(),
+    label: m.aboutMeNavLabel(),
+    url: m.experienceNavUrl(),
+  },
+  {
+    title: m.projectsNavTitle(),
+    label: m.projectsNavLabel(),
+    url: m.projectsNavUrl(),
+  },
+  {
+    title: m.educationNavTitle(),
+    label: m.educationNavLabel(),
+    url: m.educationNavUrl(),
+  },
+  {
+    title: m.certificationsNavTitle(),
+    label: m.certificationsNavLabel(),
+    url: m.certificationsNavUrl(),
+  },
+  {
+    title: m.skillsNavTitle(),
+    label: m.skillsNavLabel(),
+    url: m.skillsNavUrl(),
+  },
 ];
 ---
 
 <header
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-4"
 >
+  <button id="open-navbar" aria-controls="mobile-navbar" class="block md:hidden"
+    ><MenuIcon /></button
+  >
   <nav
-    class="flex px-3 w-full text-sm font-semibold rounded-full justify-center lg:gap-8 items-center"
+    id="navbar"
+    class="hidden md:flex px-3 text-sm font-semibold rounded-full justify-center lg:gap-8 items-center"
   >
     {
       navItems.map((link) => (
@@ -48,4 +59,84 @@ const navItems = [
       ))
     }
   </nav>
+  <nav
+    id="mobile-navbar"
+    class="fixed h-screen w-screen top-0 bottom-0 bg-zinc-800 p-6 opacity-0 invisible"
+  >
+    <div class="flex justify-between mb-6">
+      <h2 class="font-semibold text-2xl md:text-3xl">{m.menu()}</h2>
+      <button id="close-navbar" aria-controls="mobile-navbar"
+        ><CloseIcon /></button
+      >
+    </div>
+    {
+      navItems.map((link) => (
+        <div class="flex flex-col items-center mt-4">
+          <hr class="w-full border-t-gray-400 mb-3" />
+          <a
+            class="block w-full px-4 py-2 text-center text-lg text-white transition hover:bg-zinc-700 rounded"
+            aria-label={link.label}
+            href={link.url}
+          >
+            {link.title}
+          </a>
+        </div>
+      ))
+    }
+  </nav>
 </header>
+
+<script>
+  function toggleMobileNavbar() {
+    const mobileNavbar = document.getElementById("mobile-navbar");
+    const body = document.querySelector("body");
+
+    if (mobileNavbar!.classList.contains("opacity-0")) {
+      // Aparecer con fade-in
+      mobileNavbar!.classList.remove(
+        "animate-fade-out",
+        "opacity-0",
+        "invisible",
+      );
+      mobileNavbar!.classList.add("animate-fade-in");
+      body!.style.overflow = "hidden";
+    } else {
+      // Desaparecer con fade-out
+      mobileNavbar!.classList.remove("animate-fade-in");
+      mobileNavbar!.classList.add("animate-fade-out");
+      setTimeout(() => {
+        mobileNavbar!.classList.add("opacity-0", "invisible");
+        body!.style.overflow = "auto";
+      }, 300); // Duración de la animación (0.3s) para sincronizar con Tailwind
+    }
+  }
+
+  const openNavbarButton = document.getElementById("open-navbar");
+  openNavbarButton!.addEventListener("click", toggleMobileNavbar);
+
+  const closeNavbarButton = document.getElementById("close-navbar");
+  closeNavbarButton!.addEventListener("click", toggleMobileNavbar);
+</script>
+
+<style>
+  @media screen and (min-width: 640px) {
+    nav {
+      @apply bg-zinc-800;
+    }
+
+    nav {
+      animation: nav-shadown 1s linear both;
+      animation-timeline: scroll();
+      animation-range: 0 100px;
+    }
+  }
+
+  @keyframes nav-shadown {
+    0% {
+      @apply bg-zinc-700/0;
+    }
+    to {
+      @apply shadow-lg ring-1 backdrop-blur ring-white/50;
+    }
+  }
+</style>

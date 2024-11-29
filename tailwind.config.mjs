@@ -5,11 +5,21 @@ export default {
 		extend: {
 			animation: {
                 'border': 'border 4s linear infinite',
+				'fade-in': 'fadeIn 0.3s ease-in-out',
+				'fade-out': 'fadeOut 0.3s ease-in-out',
             },
             keyframes: {
                 'border': {
                     to: { '--border-angle': '360deg' },
-                }
+                },
+				'fadeIn': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' },
+				},
+				'fadeOut': {
+					'0%': { opacity: '1' },
+					'100%': { opacity: '0' },
+				},
             } ,
 			colors: {
 				'orange-highlight': '#FFC300',

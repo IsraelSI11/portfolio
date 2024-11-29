@@ -3,7 +3,7 @@ import Timeline from "./Timeline.astro";
 import * as m from "../paraglide/messages";
 ---
 
-<section class="container scroll-m-10 w-full mx-auto lg:max-w-4xl md:max-w-2xl mt-12">
+<section id={m.educationNavLabel()} class="container w-full mx-auto lg:max-w-4xl md:max-w-2xl mt-12">
     <h2 class="font-semibold text-2xl md:text-3xl mb-2">{m.educationTitle()}</h2>
     <Timeline />
 </section>

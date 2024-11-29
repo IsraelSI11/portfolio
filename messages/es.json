@@ -14,6 +14,9 @@
   "certificationsNavTitle" : "Certificaciones",
   "certificationsNavLabel" : "certificaciones",
   "certificationsNavUrl" : "/#certificaciones",
+  "skillsNavTitle" : "Habilidades",
+  "skillsNavLabel" : "habilidades",
+  "skillsNavUrl" : "/#habilidades",
   "aboutMeNavTitle" : "Sobre mí",
   "aboutMeNavLabel" : "sobre-mi",
   "aboutMeNavUrl" : "/#sobre-mi",
@@ -38,6 +41,6 @@
   "othersText": "Otros",
   "certification1Description": "Certificación diseñada para validar conocimientos básicos sobre el uso de Git y GitHub, herramientas esenciales en el desarrollo de software colaborativo.",
   "certification2Description": "Certificación que valida los conocimientos y habilidades fundamentales para desarrollar aplicaciones utilizando MongoDB.",
-  "skills": "Habilidades"
-  
+  "skills": "Habilidades",
+  "menu": "Menú"
 }
