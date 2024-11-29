@@ -15,5 +15,5 @@ export default defineConfig({
     project: './project.inlang',
     outdir: './src/paraglide' //where your files should be
   }), tailwind()],
-  adapter:vercel()
+  site: 'https://www.israelsi.tech'
 });
