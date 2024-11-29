@@ -1,0 +1,26 @@
+---
+import Certifications from "../components/Certifications.astro";
+import Education from "../components/Education.astro";
+import Experience from "../components/Experience.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContentLayout from "../layouts/ContentLayout.astro";
+import * as m from "../paraglide/messages";
+---
+
+<BaseLayout title={m.langBasedHomePageTitle()}>
+    <Header />
+    <ContentLayout>
+      <Hero />
+      <Experience />
+      <Projects />
+      <Education />
+      <Certifications />
+      <Skills />
+      <Footer />
+    </ContentLayout>
+  </BaseLayout>
