@@ -14,5 +14,6 @@ export default defineConfig({
     project: './project.inlang',
     outdir: './src/paraglide' //where your files should be
   }), tailwind()],
-  site: 'https://israelsi.me'
+  site: 'https://israelsi.me',
+  base: '/portfolio/',
 });
