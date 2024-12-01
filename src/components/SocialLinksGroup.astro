@@ -21,13 +21,13 @@ import * as m from "../paraglide/messages";
         <span>Linkedin</span>
     </SocialLink>
     <SocialLink
-        href="/Israel_Solís_Iglesias_CV.pdf"
-        download="Israel_Solís_Iglesias_CV"
+        href={`/portfolio/${m.cvPdfName()}`}
+        download={m.cvPdfName()}
     >
         <DownloadIcon />
         <span>{m.downloadCv()}</span>
     </SocialLink>
-    <SocialLink href="/Israel_Solís_Iglesias_CV.pdf">
+    <SocialLink href={m.cvUrl()}>
         <div class="flex items-center">
             <EyeIcon />
             <span>{m.viewCv()}</span>
