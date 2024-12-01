@@ -7,7 +7,7 @@ import LanguagePicker from "./LanguagePicker.astro";
 
 const parseUrl = (url: string) => {
   if (languageTag() === "en") return url;
-  return `/${languageTag()}${url}`;
+  return `${Astro.url.pathname}${url}`;
 };
 
 const navItems = [

@@ -5,8 +5,8 @@ import { languageTag } from "../paraglide/runtime";
 const makeUrlForLanguage = (lang: string) => {
   if (lang === languageTag()) return Astro.url.pathname;
   if (lang === "en")
-    return `${Astro.url.pathname.replace(`/${languageTag()}`, "")}`;
-  return `/${lang}${Astro.url.pathname.replace(`/${languageTag()}`, "")}`;
+    return `${Astro.url.pathname.replace(`/${languageTag()}`, "")}\/`;
+  return `${Astro.url.pathname.replace(`/${languageTag()}`, "")}${lang}`;
 };
 ---
 
