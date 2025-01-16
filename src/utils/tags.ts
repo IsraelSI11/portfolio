@@ -1,11 +1,14 @@
 import AngularIcon from "../components/icons/AngularIcon.astro";
 import DockerIcon from "../components/icons/DockerIcon.astro";
 import FirebaseIcon from "../components/icons/FirebaseIcon.astro";
+import FlaskIcon from "../components/icons/FlaskIcon.astro";
 import JavaIcon from "../components/icons/JavaIcon.astro";
 import JestIcon from "../components/icons/JestIcon.astro";
 import MariaDBIcon from "../components/icons/MariaDBIcon.astro";
+import NextjsIcon from "../components/icons/NextjsIcon.astro";
 import NodeIcon from "../components/icons/NodeIcon.astro";
 import PostgreSqlIcon from "../components/icons/PostgreSqlIcon.astro";
+import PythonIcon from "../components/icons/PythonIcon.astro";
 import ReactIcon from "../components/icons/ReactIcon.astro";
 import ShadcnIcon from "../components/icons/ShadcnIcon.astro";
 import SpringIcon from "../components/icons/SpringIcon.astro";
@@ -77,5 +80,20 @@ export const TAGS = {
         name: "PostgreSQL",
         class: "bg-[#336791] text-white",
         icon: PostgreSqlIcon,
+    },
+    NEXTJS: {
+        name: "Next.js",
+        class: "bg-[#000000] text-white",
+        icon: NextjsIcon,
+    },
+    PYTHON: {
+        name: "Python",
+        class: "bg-[#3776AB] text-white",
+        icon: PythonIcon,
+    },
+    FLASK: {
+        name: "Flask",
+        class: "bg-[#000000] text-white",
+        icon: FlaskIcon,
     },
 };
