@@ -2,8 +2,23 @@
 import * as m from "../paraglide/messages";
 import { TAGS } from "../utils/tags";
 import RepositoryLink from "./RepositoryLink.astro";
+import WebsiteLink from "./WebsiteLink.astro";
 
 const projects = [
+    {
+        title: m.project5Title(),
+        description: m.project5Description(),
+        image: "/project5.png",
+        website: "https://spgemini.com/",
+        tags: [TAGS.REACT, TAGS.TYPESCRIPT],
+    },
+    {
+        title: m.project6Title(),
+        description: m.project6Description(),
+        image: "/project6.png",
+        website: "https://play.google.com/store/apps/details?id=com.anonymous.impostergame",
+        tags: [TAGS.REACT, TAGS.TYPESCRIPT],
+    },
     {
         title: m.project1Title(),
         description: m.project1Description(),
@@ -46,7 +61,7 @@ const projects = [
         image: "/project4.png",
         repositoryLink: "https://github.com/IsraelSI11/stock-hub",
         tags: [TAGS.ANGULAR, TAGS.JAVA, TAGS.SPRING, TAGS.POSTGRESQL],
-    },
+    }
 ];
 ---
 
@@ -68,7 +83,9 @@ const projects = [
                             <h3 class="text-xl md:text-2xl font-semibold">
                                 {project.title}
                             </h3>
-                            {project.repositoryLink ? (
+                            {project.website ? (
+                                <WebsiteLink href={project.website} />
+                            ) : project.repositoryLink ? (
                                 <RepositoryLink href={project.repositoryLink} />
                             ) : (
                                 <span>{m.privateRepository()}</span>
