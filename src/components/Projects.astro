@@ -17,7 +17,23 @@ const projects = [
         description: m.project6Description(),
         image: "/project6.png",
         website: "https://play.google.com/store/apps/details?id=com.anonymous.impostergame",
-        tags: [TAGS.REACT, TAGS.TYPESCRIPT],
+        tags: [TAGS.FLUTTER],
+    },
+    {
+        title: m.project7Title(),
+        description: m.project7Description(),
+        image: "/project7.png",
+        websites: [
+            {
+                href: "https://apps.apple.com/us/app/everlee-couples-pet/id6782620245",
+                label: m.appStore(),
+            },
+            {
+                href: "https://play.google.com/store/apps/details?id=com.duopet.duopet_board",
+                label: m.playStore(),
+            },
+        ],
+        tags: [TAGS.FLUTTER, TAGS.FIREBASE],
     },
     {
         title: m.project1Title(),
@@ -83,7 +99,16 @@ const projects = [
                             <h3 class="text-xl md:text-2xl font-semibold">
                                 {project.title}
                             </h3>
-                            {project.website ? (
+                            {project.websites ? (
+                                <div class="flex gap-2">
+                                    {project.websites.map((site) => (
+                                        <WebsiteLink
+                                            href={site.href}
+                                            label={site.label}
+                                        />
+                                    ))}
+                                </div>
+                            ) : project.website ? (
                                 <WebsiteLink href={project.website} />
                             ) : project.repositoryLink ? (
                                 <RepositoryLink href={project.repositoryLink} />

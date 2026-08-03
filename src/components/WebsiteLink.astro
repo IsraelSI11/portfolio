@@ -1,9 +1,12 @@
 ---
 import WebsiteIcon from "./icons/WebsiteIcon.astro";
 import * as m from "../paraglide/messages";
+
+const { label, ...anchorProps } = Astro.props;
+const linkLabel = label ?? m.website();
 ---
 
-<a {...Astro.props}>
+<a {...anchorProps}>
     <button
         class="relative inline-block p-px font-semibold leading-6 text-white no-underline bg-gray-800 shadow-2xl cursor-pointer group rounded-xl shadow-zinc-900"
         ><span class="absolute inset-0 overflow-hidden rounded-xl"
@@ -16,7 +19,7 @@ import * as m from "../paraglide/messages";
             class="relative z-10 flex items-center px-2 py-1 md:px-6 md:py-3 space-x-2 rounded-xl bg-zinc-800/80 ring-1 ring-white/10"
         >
             <WebsiteIcon />
-            <span>{m.website()}</span>
+            <span>{linkLabel}</span>
         </div>
         <span
             class="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-sky-400/0 via-sky-300/90 to-sky-400/0 transition-opacity duration-500 group-hover:opacity-40"

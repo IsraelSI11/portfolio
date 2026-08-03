@@ -2,6 +2,7 @@ import AngularIcon from "../components/icons/AngularIcon.astro";
 import DockerIcon from "../components/icons/DockerIcon.astro";
 import FirebaseIcon from "../components/icons/FirebaseIcon.astro";
 import FlaskIcon from "../components/icons/FlaskIcon.astro";
+import FlutterIcon from "../components/icons/FlutterIcon.astro";
 import JavaIcon from "../components/icons/JavaIcon.astro";
 import JestIcon from "../components/icons/JestIcon.astro";
 import MariaDBIcon from "../components/icons/MariaDBIcon.astro";
@@ -95,5 +96,10 @@ export const TAGS = {
         name: "Flask",
         class: "bg-[#000000] text-white",
         icon: FlaskIcon,
+    },
+    FLUTTER: {
+        name: "Flutter",
+        class: "bg-[#47C5FB] text-white",
+        icon: FlutterIcon,
     },
 };
